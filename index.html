@@ -1,0 +1,495 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Bar Mesón Jovi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Bar Mesón Jovi, en la Rúa Pino de Santiago de Vigo. Tapas, cocido, lacón con grelos, carnes y pescado frito. Terraza y café desde las 10:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarOrPub","name":"Bar Mesón Jovi","servesCuisine":"Gallega","priceRange":"€€","telephone":"+34672550700",
+"address":{"@type":"PostalAddress","streetAddress":"Rúa Pino, 24","addressLocality":"Vigo","addressRegion":"Pontevedra","postalCode":"36206","addressCountry":"ES"},
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"23:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"17:00"}]}
+</script>
+<style>
+/* Concepto: el mantel de papel de la mesa. Marcos de doble filete azul como los manteles del Camino,
+   vino tinto de la cunca como acento, serif cálida para la cocina de siempre. Móvil primero, claro por defecto. */
+:root{
+  --bg:#f2f5f8; --paper:#ffffff; --glass:rgba(242,245,248,.92);
+  --ink:#13213d; --muted:#55617a;
+  --blue:#2a4d96; --rule:rgba(42,77,150,.34);
+  --wine:#7b1e2f; --on-wine:#ffffff; --wine-hover:#5f1624; --wine-text:#7b1e2f;
+  --star:#d29a12; --star-off:rgba(19,33,61,.2);
+  --shade:rgba(8,12,22,.84); --chalk:#f6f4ee;
+  --f-display:'Fraunces',Georgia,'Times New Roman',serif;
+  --f-body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --gutter:max(16px,env(safe-area-inset-left,0px));
+  --gutter-r:max(16px,env(safe-area-inset-right,0px));
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1526; --paper:#15213a; --glass:rgba(13,21,38,.92);
+    --ink:#eef1f7; --muted:#a5b0c6;
+    --blue:#8fb1f0; --rule:rgba(143,177,240,.36);
+    --wine:#e58a97; --on-wine:#2b0b12; --wine-hover:#f2a8b2; --wine-text:#f0a0ab;
+    --star:#f3c14d; --star-off:rgba(238,241,247,.22); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d1526; --paper:#15213a; --glass:rgba(13,21,38,.92);
+  --ink:#eef1f7; --muted:#a5b0c6;
+  --blue:#8fb1f0; --rule:rgba(143,177,240,.36);
+  --wine:#e58a97; --on-wine:#2b0b12; --wine-hover:#f2a8b2; --wine-text:#f0a0ab;
+  --star:#f3c14d; --star-off:rgba(238,241,247,.22); color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1rem;line-height:1.6;-webkit-text-size-adjust:100%;overflow-x:hidden;padding-bottom:78px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:40}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--f-display);margin:0;text-wrap:balance}
+p{margin:0}
+:focus-visible{outline:3px solid var(--wine-text);outline-offset:3px;border-radius:3px}
+.wrap{width:100%;max-width:1180px;margin-inline:auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+section[id]{scroll-margin-top:76px}
+.ico{width:1.35em;height:1.35em;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Cabecera ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1.5px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:18px;min-height:62px}
+.mark{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:1.25rem;letter-spacing:-.01em;text-decoration:none;margin-right:auto;white-space:nowrap}
+.mark .ico{width:26px;height:26px;color:var(--blue)}
+.mark i{font-style:italic;color:var(--wine-text)}
+.nav{display:none;gap:26px;font-weight:600;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--muted);padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--ink);border-color:var(--wine-text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:6px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:var(--f-body);transition:background .2s,border-color .2s,transform .2s}
+.btn-main{background:var(--wine);color:var(--on-wine)}
+.btn-main:hover{background:var(--wine-hover)}
+.btn-line{border-color:var(--blue);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--paper)}
+.btn:active{transform:scale(.98)}
+.top .btn{display:none;min-height:40px;padding:0 18px;font-size:.92rem}
+
+/* ---------- Hero ---------- */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:44px;padding-block:34px 56px}
+.hero .copy{min-width:0}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--blue)}
+h1{font-size:clamp(2.6rem,11vw,5.2rem);font-weight:800;line-height:1;letter-spacing:-.025em;margin-top:16px;font-variation-settings:"opsz" 144}
+h1 em{font-style:italic;font-weight:700;color:var(--wine-text)}
+.lead{margin-top:20px;font-size:1.12rem;color:var(--muted);max-width:33em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.today{margin-top:20px;display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.95rem}
+.visual{position:relative;padding-bottom:46px}
+.frame{background:var(--paper);padding:9px;border:2px solid var(--blue);outline:1px solid var(--rule);outline-offset:5px}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame.main img{aspect-ratio:4/4.5}
+.frame.small{position:absolute;left:-2px;bottom:0;width:40%;padding:6px;outline-offset:3px}
+.frame.small img{aspect-ratio:1/1}
+.frame.tagphoto{position:absolute;right:10px;top:-18px;width:54%;padding:6px;outline-offset:3px}
+.frame.tagphoto img{aspect-ratio:650/310;height:auto}
+.badge b{display:block;font-family:var(--f-display);font-size:2.3rem;font-weight:800}
+.badge small{display:block;font-size:.8rem;font-weight:600;color:var(--muted);margin-top:4px}
+.glyph{display:inline-block;font-size:1.05rem;letter-spacing:.08em;line-height:1;background:linear-gradient(90deg,var(--star) 94%,var(--star-off) 94%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .hero .copy>*{animation:up .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero .copy>:nth-child(2){animation-delay:.07s}.hero .copy>:nth-child(3){animation-delay:.14s}
+  .hero .copy>:nth-child(4){animation-delay:.21s}.hero .copy>:nth-child(5){animation-delay:.28s}
+  .visual{animation:up .9s .15s cubic-bezier(.2,.7,.2,1) both}
+}
+
+/* ---------- Servicios ---------- */
+.perks{border-block:2px solid var(--blue);background:var(--paper);box-shadow:inset 0 5px 0 var(--paper),inset 0 6.5px 0 var(--rule),inset 0 -5px 0 var(--paper),inset 0 -6.5px 0 var(--rule)}
+.perks ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr}
+.perks li{display:flex;align-items:center;gap:12px;padding:20px 4px}
+.perks li:nth-child(n+3){border-top:1px solid var(--rule)}
+.perks .ico{width:30px;height:30px;color:var(--blue)}
+.perks b{display:block;font-weight:700;line-height:1.2}
+.perks small{display:block;color:var(--muted);font-size:.86rem;line-height:1.3}
+
+/* ---------- Secciones ---------- */
+.sec{padding-block:64px}
+.head{margin-bottom:30px;max-width:40em}
+.head h2{font-size:clamp(2rem,6.6vw,3.2rem);font-weight:800;line-height:1.06;letter-spacing:-.02em;margin-top:12px}
+.head p{margin-top:14px;color:var(--muted);font-size:1.05rem}
+.demo{display:inline-flex;align-items:center;gap:8px;margin-top:16px;border:1.5px dashed var(--wine-text);color:var(--wine-text);padding:6px 14px;border-radius:999px;font-weight:700;font-size:.85rem}
+
+/* Platos */
+.cards{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1*var(--gutter)) calc(-1*var(--gutter-r));padding:4px var(--gutter-r) 14px var(--gutter);scroll-padding-left:var(--gutter);scrollbar-width:thin}
+.card{position:relative;flex:0 0 74%;max-width:300px;aspect-ratio:4/5;overflow:hidden;scroll-snap-align:start;background:var(--paper);margin:0;border:2px solid var(--blue);padding:6px}
+.card .im{position:relative;width:100%;height:100%;overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card figcaption{position:absolute;inset:auto 0 0;padding:46px 14px 12px;background:linear-gradient(transparent,var(--shade));color:var(--chalk);display:flex;flex-direction:column;gap:2px}
+.card h3{font-size:1.25rem;font-weight:700;line-height:1.15}
+.card span{font-size:.88rem;color:rgba(246,244,238,.8)}
+.card .price{position:absolute;top:10px;right:10px;background:var(--paper);color:var(--wine-text);border:1.5px dashed var(--wine-text);font-weight:800;font-size:.9rem;padding:3px 11px;border-radius:999px}
+.hint{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--muted);margin-top:6px}
+
+/* Mantel con la carta */
+.mat{margin-top:46px;background:var(--paper);border:2px solid var(--blue);box-shadow:inset 0 0 0 7px var(--paper),inset 0 0 0 8.5px var(--blue);padding:36px 26px 30px}
+.mat-title{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.mat-title .ico{width:34px;height:34px;color:var(--blue)}
+.mat-title h3{font-size:2.3rem;font-weight:800;letter-spacing:-.02em}
+.mat-title p{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.groups{display:grid;gap:28px;margin-top:26px}
+.groups h4{font-size:1.45rem;font-weight:700;font-style:italic;color:var(--wine-text);padding-bottom:8px;border-bottom:1.5px solid var(--rule)}
+.groups ul{list-style:none;margin:6px 0 0;padding:0}
+.groups li{display:flex;align-items:baseline;gap:8px;padding:8px 0;font-size:1.05rem;font-weight:500}
+.groups small{color:var(--muted);font-weight:500;font-size:.78rem;margin-left:4px;text-transform:uppercase;letter-spacing:.07em}
+.dots{flex:1;border-bottom:2px dotted var(--rule);transform:translateY(-4px);min-width:16px}
+.p{font-variant-numeric:tabular-nums;color:var(--wine-text);font-weight:800;white-space:nowrap}
+.note{margin-top:24px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem;text-align:center}
+
+/* El local */
+.local{background:var(--paper);border-block:1.5px solid var(--rule)}
+.local .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
+.facts{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:14px}
+.facts li{display:flex;gap:12px;align-items:flex-start;color:var(--muted)}
+.facts li .ico{color:var(--blue);margin-top:2px}
+.facts strong{color:var(--ink);font-weight:700}
+.gal{columns:2;column-gap:10px}
+.gal button{display:block;width:100%;margin:0 0 10px;padding:6px;border:2px solid var(--blue);background:var(--bg);cursor:zoom-in;position:relative;break-inside:avoid;color:inherit;font:inherit}
+.gal .im{position:relative;overflow:hidden}
+.gal img{width:100%;height:auto;transition:transform .5s}
+.gal .cap{position:absolute;left:8px;bottom:8px;background:var(--shade);color:var(--chalk);font-size:.78rem;font-weight:600;padding:3px 9px;border-radius:999px}
+dialog{border:0;padding:0;background:var(--paper);color:var(--ink);max-width:min(92vw,820px);max-height:90vh;overflow:hidden;border:2px solid var(--blue)}
+dialog::backdrop{background:rgba(5,8,16,.82)}
+dialog img{max-height:78vh;width:auto;max-width:100%;margin:auto}
+dialog p{padding:10px 16px 14px;font-size:.95rem;text-align:center}
+dialog .x{position:absolute;top:8px;right:8px;width:40px;height:40px;border-radius:50%;border:0;background:var(--shade);color:var(--chalk);font-size:1.5rem;line-height:1;cursor:pointer}
+
+/* Opiniones */
+.sum{display:flex;align-items:center;flex-wrap:wrap;gap:6px 18px;margin-bottom:26px}
+.score{font-family:var(--f-display);font-size:clamp(3.4rem,12vw,5rem);font-weight:800;line-height:1}
+.sum .glyph{font-size:1.5rem}
+.sum small{display:block;color:var(--muted);font-weight:600;font-size:.95rem}
+.rv-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.rv{background:var(--paper);border:2px solid var(--blue);box-shadow:inset 0 0 0 5px var(--paper),inset 0 0 0 6.5px var(--rule);padding:30px 26px;display:flex;flex-direction:column;gap:14px;margin:0}
+.stars{display:flex;gap:3px;color:var(--star)}
+.stars svg{width:18px;height:18px;fill:currentColor}
+.rv blockquote{margin:0;font-family:var(--f-display);font-size:1.2rem;line-height:1.4;font-weight:500}
+.rv.big blockquote{font-size:1.4rem}
+.rv .who{margin-top:auto;color:var(--muted);font-size:.92rem}
+.rv .who b{color:var(--ink);font-weight:700}
+
+/* Horario y contacto */
+.info{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.box{background:var(--paper);border:2px solid var(--blue);box-shadow:inset 0 0 0 5px var(--paper),inset 0 0 0 6.5px var(--rule);padding:30px 26px}
+.box h3{font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+.box h3 .ico{color:var(--blue)}
+.sched{list-style:none;margin:16px 0 0;padding:0}
+.sched li{display:flex;justify-content:space-between;gap:16px;padding:11px 10px;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums}
+.sched li:last-child{border-bottom:0}
+.sched li.off span:last-child{color:var(--muted)}
+.sched li.now{background:color-mix(in srgb,var(--wine-text) 14%,transparent);font-weight:700}
+.fach{margin-top:16px;border:1.5px solid var(--rule)}
+.fach img{width:100%;height:auto}
+.addr{margin-top:16px;font-size:1.2rem;font-weight:600;line-height:1.35;font-style:normal}
+.addr small{display:block;font-weight:400;color:var(--muted);font-size:.95rem;margin-top:4px}
+.tel{margin-top:14px;font-size:1.25rem;font-weight:700;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:10px}
+.tel .ico{color:var(--blue)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.price-note{margin-top:20px;padding-top:18px;border-top:1px solid var(--rule);color:var(--muted);font-size:.95rem}
+.price-note strong{color:var(--ink)}
+
+/* Pie y barra móvil */
+footer{border-top:2px solid var(--blue);padding-block:34px 40px;color:var(--muted);font-size:.92rem}
+footer .wrap{display:grid;gap:14px}
+footer .mark{font-size:1.5rem;color:var(--ink)}
+.bar{position:fixed;inset:auto 0 0;z-index:30;display:flex;gap:10px;padding:10px var(--gutter-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gutter);background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1.5px solid var(--rule)}
+.bar .btn{flex:1;padding:0 12px}
+
+/* ---------- Escritorio ---------- */
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .nav{display:flex}
+  .top .btn{display:inline-flex}
+  .bar{display:none}
+  .perks ul{grid-template-columns:repeat(4,1fr)}
+  .perks li{padding:24px 18px}
+  .perks li:nth-child(n+3){border-top:0}
+  .perks li+li{border-left:1px solid var(--rule)}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;overflow:visible;margin:0;padding:0}
+  .card{flex:none;max-width:none}
+  .card:hover img{transform:scale(1.05)}
+  .hint{display:none}
+  .mat{padding:46px 48px 38px}
+  .groups{grid-template-columns:1fr 1fr;gap:32px 60px}
+  .gal{columns:2}
+  .gal button:hover img{transform:scale(1.04)}
+  .info{grid-template-columns:1fr 1fr;gap:20px}
+  .box{padding:34px 36px}
+  .rv-grid{grid-template-columns:1.25fr 1fr;gap:16px}
+  .rv.big{grid-row:1/3;justify-content:center;padding:44px 40px}
+}
+@media (min-width:980px){
+  .hero .wrap{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:64px;padding-block:72px 90px}
+  .local .grid{grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
+  .sec{padding-block:92px}
+  footer .wrap{grid-template-columns:1fr auto;align-items:end}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="shell" viewBox="0 0 24 24"><path d="M12 21 3.4 9.4a10.4 10.4 0 0 1 17.2 0z"/><path d="M12 21V5.6M12 21 7.2 6.6M12 21l-6.3-9M12 21l4.8-14.4M12 21l6.3-9M9 22h6"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Bar Mesón Jovi, inicio"><svg class="ico" aria-hidden="true"><use href="#shell"/></svg><span>Bar Mesón <i>Jovi</i></span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#carta">Carta</a><a href="#local">El local</a><a href="#opiniones">Opiniones</a><a href="#horario">Horario</a>
+    </nav>
+    <a class="btn btn-main" href="tel:+34672550700">Llamar</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="copy">
+        <p class="eyebrow">Bar mesón · Rúa Pino, Vigo</p>
+        <h1>Como <em>en casa</em>, en Santiago de Vigo</h1>
+        <p class="lead">Tapas, cocido, lacón con grelos, carnes y pescado frito en un local de los de antes. Con terraza y café desde las 10:00.</p>
+        <div class="cta">
+          <a class="btn btn-main" href="tel:+34672550700"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Llamar</a>
+          <a class="btn btn-line" href="#carta">Ver la carta</a>
+        </div>
+        <p class="today"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span id="today-text">Abierto de lunes a sábado desde las 10:00</span></p>
+      </div>
+      <div class="visual">
+        <div class="frame main"><img src="img/lacon.jpg" alt="Plato de lacón con patatas y bandeja de grelos con chorizo, con una copa de vino tinto" width="768" height="1024" fetchpriority="high"></div>
+        <div class="frame small"><img src="img/cocido.jpg" alt="Cocido gallego en bandeja con garbanzos, repollo, patatas y chorizo" width="768" height="1024"></div>
+        <div class="frame tagphoto"><img src="img/local.jpg" alt="Letrero y toldo del Bar Jovi en la Rúa Pino" width="650" height="310"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="perks" aria-label="Servicios">
+    <div class="wrap">
+      <ul>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0118 0H3z"/><path d="M12 12v7a2 2 0 004 0"/></svg><div><b>Terraza</b><small>Mesas al aire libre</small></div></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v6M9 3v6M17 21V3c-2.2 1.4-3 4-3 7v3h3"/></svg><div><b>Comida en el bar</b><small>Tapas y platos</small></div></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3"/></svg><div><b>Desde las 10:00</b><small>Café y comida</small></div></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.2A4 4 0 1015 14.8M8 11h6M8 13h6"/></svg><div><b>10–20 € por persona</b><small>Según Google</small></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="carta">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">La carta</p>
+        <h2>Platos de cuchara, carnes, fritos y vino de la casa</h2>
+        <p>Lo que se ve en la mesa de Jovi, y toda la carta más abajo.</p>
+        <span class="demo">Carta de ejemplo · precios por confirmar</span>
+      </div>
+
+      <div class="cards" tabindex="0" aria-label="Platos destacados, desliza para ver más">
+        <figure class="card"><div class="im"><img src="img/lacon.jpg" alt="Lacón con patatas y grelos" loading="lazy" decoding="async"></div><span class="price">? €</span><figcaption><h3>Lacón con grelos</h3><span>Con patatas y chorizo</span></figcaption></figure>
+        <figure class="card"><div class="im"><img src="img/cocido.jpg" alt="Cocido gallego en bandeja" loading="lazy" decoding="async"></div><span class="price">? €</span><figcaption><h3>Cocido gallego</h3><span>Con garbanzos, repollo y patatas</span></figcaption></figure>
+        <figure class="card"><div class="im"><img src="img/entrecot.jpg" alt="Entrecot a la plancha con patatas fritas y ensalada" loading="lazy" decoding="async"></div><span class="price">? €</span><figcaption><h3>Entrecot</h3><span>Con patatas fritas y ensalada</span></figcaption></figure>
+        <figure class="card"><div class="im"><img src="img/chuleton.jpg" alt="Chuletón con patatas y ensalada de tomate" loading="lazy" decoding="async"></div><span class="price">? €</span><figcaption><h3>Chuletón de ternera</h3><span>Con patatas y ensalada</span></figcaption></figure>
+        <figure class="card"><div class="im"><img src="img/fabas.jpg" alt="Plato hondo de fabas con chorizo" loading="lazy" decoding="async"></div><span class="price">? €</span><figcaption><h3>Fabas con chorizo</h3><span>Plato de cuchara</span></figcaption></figure>
+        <figure class="card"><div class="im"><img src="img/pescadito.jpg" alt="Pescadito frito en bandeja" loading="lazy" decoding="async"></div><span class="price">? €</span><figcaption><h3>Pescadito frito</h3><span>Para compartir</span></figcaption></figure>
+        <figure class="card"><div class="im"><img src="img/guisado.jpg" alt="Carne guisada con patatas en bandeja" loading="lazy" decoding="async"></div><span class="price">? €</span><figcaption><h3>Carne guisada</h3><span>Con patatas</span></figcaption></figure>
+        <figure class="card"><div class="im"><img src="img/tapas-vino.jpg" alt="Dos tapas de pasta con carne y pan, con dos cuncas de vino tinto" loading="lazy" decoding="async"></div><span class="price">? €</span><figcaption><h3>Tapa y vino</h3><span>Pasta con carne y pan</span></figcaption></figure>
+      </div>
+      <p class="hint"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Desliza para ver más platos</p>
+
+      <div class="mat" role="region" aria-label="Carta">
+        <div class="mat-title">
+          <svg class="ico" aria-hidden="true"><use href="#shell"/></svg>
+          <h3>La carta</h3>
+          <p>Bar Mesón Jovi</p>
+        </div>
+        <div class="groups">
+          <div>
+            <h4>Tapas</h4>
+            <ul>
+              <li><span>Tapa de pasta con carne</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Calamar con patatas</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Patatas asadas</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Ensalada mixta</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Platos de cuchara</h4>
+            <ul>
+              <li><span>Cocido gallego</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Fabas con chorizo</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Carnes</h4>
+            <ul>
+              <li><span>Lacón con grelos</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Entrecot con patatas</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Chuletón de ternera</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Carne guisada con patatas</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Pescado y para beber</h4>
+            <ul>
+              <li><span>Filetes de pescado</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Pescadito frito <small>ración</small></span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Vino de la casa <small>jarra</small></span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Cerveza</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+              <li><span>Café</span><i class="dots" aria-hidden="true"></i><span class="p">? €</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Carta de ejemplo para esta propuesta. Los platos y precios reales los pone el local.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec local" id="local">
+    <div class="wrap grid">
+      <div>
+        <p class="eyebrow">El local</p>
+        <h2 style="font-size:clamp(2rem,6.6vw,3.2rem);font-weight:800;line-height:1.06;letter-spacing:-.02em;margin-top:12px">Pequeño, acogedor y de los de antes</h2>
+        <ul class="facts">
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h1.5a2.5 2.5 0 0 1 0 5H17"/></svg><span><strong>Atención cercana.</strong> Los clientes hablan de un trato como en casa.</span></li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0118 0H3z"/><path d="M12 12v7a2 2 0 004 0"/></svg><span><strong>Terraza.</strong> Mesas fuera para tomar algo al sol.</span></li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l-1 7a3 3 0 01-6 0zM12 13v8M8 21h8"/></svg><span><strong>Vino de la casa.</strong> En jarra o en taza, como se sirve de siempre.</span></li>
+          
+        </ul>
+      </div>
+      <div class="gal">
+        <button type="button" data-src="img/fachada.jpg" data-cap="La fachada, en la Rúa Pino"><span class="im"><img src="img/fachada.jpg" alt="Letrero y toldo granate del Bar Jovi" loading="lazy" decoding="async"></span></button>
+        <button type="button" data-src="img/cafe.jpg" data-cap="Un café en Jovi"><span class="im"><img src="img/cafe.jpg" alt="Café y copa de aceite sobre un mantel de papel con el mapa del Camino de Santiago" loading="lazy" decoding="async"><span class="cap">El café</span></span></button>
+        <button type="button" data-src="img/vino.jpg" data-cap="Vino tinto, en copa y en jarra"><span class="im"><img src="img/vino.jpg" alt="Copa y jarra de vino tinto sobre la mesa" loading="lazy" decoding="async"><span class="cap">Vino de la casa</span></span></button>
+        <button type="button" data-src="img/calamar.jpg" data-cap="Calamar con patatas y pan"><span class="im"><img src="img/calamar.jpg" alt="Tapa de calamar con patatas en salsa y una rebanada de pan" loading="lazy" decoding="async"><span class="cap">Tapa de calamar</span></span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="opiniones">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Opiniones</p>
+        <h2>Lo cuentan quienes han venido</h2>
+      </div>
+      <div class="sum">
+        <span class="score">4,7</span>
+        <div><span class="glyph" role="img" aria-label="4,7 de 5 estrellas">★★★★★</span><small>58 reseñas en Google</small></div>
+      </div>
+      <div class="rv-grid">
+        <figure class="rv big"><div class="stars" role="img" aria-label="5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div><blockquote>“Entras aquí y es como si estuvieras en casa. Siempre que puedo le paso a tomar café o a comer, es acogedor y te ves muy cómodo siempre, con una atención muy cercana y la comida es espectacular. No le doy 6 estrellas porque no se puede.”</blockquote><figcaption class="who"><b>Killo Al norte</b> · Reseña en Google, hace 3 semanas</figcaption></figure>
+        <figure class="rv"><div class="stars" role="img" aria-label="5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div><blockquote>“Lugar pequeño pero acogedor, las mejores tapas del calvario. Un local de los de antes. Natacha y Sergio dos anfitriones de lujo”</blockquote><figcaption class="who"><b>José Manuel P.</b> · Reseña en Google, hace 2 semanas</figcaption></figure>
+        <figure class="rv"><div class="stars" role="img" aria-label="5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div><blockquote>“Excelente lugar me atendieron como un rey, la comida estaba muy bien”</blockquote><figcaption class="who"><b>Karl H.</b> · Reseña en Google, hace un año</figcaption></figure>
+      </div>
+      <div class="btns" style="margin-top:26px"><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Bar+Mes%C3%B3n+Jovi+R%C3%BAa+Pino+24+Vigo" target="_blank" rel="noopener">Leer las 58 reseñas en Google</a></div>
+    </div>
+  </section>
+
+  <section class="sec" id="horario" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Ven a vernos</p>
+        <h2>Horario y cómo llegar</h2>
+      </div>
+      <div class="info">
+        <div class="box">
+          <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horario</h3>
+          <ul class="sched" id="sched">
+            <li data-d="1"><span>Lunes</span><span>10:00–23:00</span></li>
+            <li data-d="2"><span>Martes</span><span>10:00–23:00</span></li>
+            <li data-d="3"><span>Miércoles</span><span>10:00–23:00</span></li>
+            <li data-d="4"><span>Jueves</span><span>10:00–23:00</span></li>
+            <li data-d="5"><span>Viernes</span><span>10:00–23:00</span></li>
+            <li data-d="6"><span>Sábado</span><span>10:00–17:00</span></li>
+            <li data-d="0" class="off"><span>Domingo</span><span>Cerrado</span></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></svg>Dónde estamos</h3>
+          <div class="fach"><img src="img/fachada.jpg" alt="Fachada del Bar Jovi" width="650" height="235" loading="lazy" decoding="async"></div>
+          <address class="addr" id="addr">Rúa Pino, 24<small>Santiago de Vigo, 36206 Vigo, Pontevedra</small></address>
+          <p class="tel"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span id="phone">672 55 07 00</span></p>
+          <div class="btns">
+            <a class="btn btn-main" href="tel:+34672550700">Llamar</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=R%C3%BAa+Pino+24%2C+36206+Vigo" target="_blank" rel="noopener">Cómo llegar</a>
+            <button class="btn btn-line" type="button" data-copy="Rúa Pino, 24, Santiago de Vigo, 36206 Vigo, Pontevedra" data-sel="addr" data-label="Copiar dirección"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></svg><span>Copiar dirección</span></button>
+            <button class="btn btn-line" type="button" data-copy="672 55 07 00" data-sel="phone" data-label="Copiar teléfono"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></svg><span>Copiar teléfono</span></button>
+          </div>
+          <p class="price-note"><strong>De 10 a 20 € por persona.</strong> Gasto medio según los clientes en Google.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="mark" href="#top"><svg class="ico" aria-hidden="true"><use href="#shell"/></svg><span>Bar Mesón <i>Jovi</i></span></a>
+      <p style="margin-top:8px">Rúa Pino, 24 · Santiago de Vigo, 36206 Vigo · 672 55 07 00</p>
+    </div>
+    <p>© 2026 Bar Mesón Jovi</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-main" href="tel:+34672550700">Llamar</a>
+  <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=R%C3%BAa+Pino+24%2C+36206+Vigo" target="_blank" rel="noopener">Cómo llegar</a>
+</div>
+
+<dialog id="lb" aria-label="Foto ampliada">
+  <button class="x" type="button" aria-label="Cerrar">×</button>
+  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+  <p id="lb-cap"></p>
+</dialog>
+
+<script>
+(function(){
+  var MAP={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+  function today(){
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Madrid',weekday:'short'}).formatToParts(new Date());
+    var w='';p.forEach(function(x){if(x.type==='weekday')w=x.value});
+    return MAP[w];
+  }
+  try{
+    var d=today(),t=document.getElementById('today-text');
+    t.textContent=d===0?'Hoy cerrado. Abrimos de lunes a sábado.':d===6?'Hoy: 10:00–17:00':'Hoy: 10:00–23:00';
+    var row=document.querySelector('#sched li[data-d="'+d+'"]');
+    if(row)row.classList.add('now');
+  }catch(e){}
+
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    var lab=btn.querySelector('span'),orig=btn.getAttribute('data-label');
+    btn.addEventListener('click',function(){
+      function done(msg){lab.textContent=msg;setTimeout(function(){lab.textContent=orig},2200)}
+      function fallback(){
+        var el=document.getElementById(btn.getAttribute('data-sel'));
+        if(el){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+        done('Seleccionado');
+      }
+      try{navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(function(){done('Copiado')},fallback)}catch(e){fallback()}
+    });
+  });
+
+  var lb=document.getElementById('lb');
+  if(lb&&typeof lb.showModal==='function'){
+    var img=lb.querySelector('img'),cap=document.getElementById('lb-cap');
+    document.querySelectorAll('.gal button').forEach(function(b){
+      b.addEventListener('click',function(){
+        img.src=b.getAttribute('data-src');img.alt=b.querySelector('img').alt;cap.textContent=b.getAttribute('data-cap');
+        lb.showModal();
+      });
+    });
+    lb.querySelector('.x').addEventListener('click',function(){lb.close()});
+    lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+  }
+})();
+</script>
+
+</body></html>
